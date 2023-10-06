@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Heading, Flex,VStack } from "@chakra-ui/react";
+import { Heading,Stack, Flex,VStack } from "@chakra-ui/react";
 
 //Component
 import Navebar from "@/component/Navbar";
@@ -14,9 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <VStack spacing={2}>
-          <Navebar/>
-        </VStack>
+        <Stack justify={'center'} width={'auto'} alignItems={'center'} direction={"row"} spacing={4}>
+        <Navebar/>
+        </Stack>
       </main>
     </>
   );

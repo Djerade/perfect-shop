@@ -1,18 +1,24 @@
 import { extendTheme } from '@chakra-ui/react'
+import { createBreakpoints, Styles } from "@chakra-ui/theme-tools";
+
+
 const colors = {
     transparent: "transparent",
-    black: "#000",
+    textPrincipal: "#000",
     white: "#fff",
-    text: "red",
-    gray: {
-      50: "#f7fafc",
-      // ...
-      900: "#171923",
-    },
+    princpale : "#00FF00",
+    secondair:'RGBA(0, 0, 0, 0.92)',
+    textSecondair: "RGBA(0, 0, 0, 0.48)"	
 
   }
+  const breakpoints = createBreakpoints({
+    sm: "37.5em", // 600px
+    md: "56.25em", // 900px
+    lg: "75em", // 1200px
+    xl: "112.5em", // 1800px
+  });
   const fonts = {
-    body: `Nunito, sans-serif`,
+    body:  `'Raleway', sans-serif`,
   };
 const fontSizes = {
   xs: "0.75rem",
@@ -35,7 +41,8 @@ const fontSizes = {
 const theme = extendTheme({
     fontSizes,
     colors,
-    fonts
+    fonts,
+    breakpoints
 });
 
 export default theme;
